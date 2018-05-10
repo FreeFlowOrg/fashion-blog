@@ -1,0 +1,61 @@
+nav {
+    background-color: #fff;
+}
+
+nav ul li a, .sidenav li a {
+    color: #646464;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+nav ul li a:hover, .sidenav li a:hover {
+    color: rgb(238, 110, 115);
+    background-color: #fff; 
+}
+
+nav ul li a.active {
+    color: rgb(238, 110, 115);
+}
+
+.carousel .carousel-item {
+    visibility: hidden;
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer{
+	background-color: #272833;
+	color: white;
+    text-align: center;
+    height: 165px;
+}
+.footer_social{
+	margin-top: 25px;
+}
+.copyright{
+	margin-top: 50px;
+}
+
+.btn-fb{
+	background-color: #3b5998; 
+	font-size: 20px;
+}
+.btn-in{
+	background-color: #fb3958; 
+	font-size: 20px; 
+}
+.btn-tw{
+	background-color:#0084b4; 
+	font-size: 20px; 
+}
+.btn-li{
+	background-color: #0077B5; 
+	font-size: 20px; 
+}
+.btn-gplus{
+    background-color: #db4a39; 
+    font-size: 20px; 
+}

@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Material Components for the web</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../static/materialize/css/materialize.css">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo right">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="left hide-on-med-and-down">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="fashion.html">Fashion</a>
+                </li>
+                <li>
+                    <a href="beauty.html">Beauty</a>
+                </li>
+                <li>
+                    <a href="lifestyle.html">Lifestyle</a>
+                </li>
+                <li>
+                    <a href="travel.html">Travel</a>
+                </li>
+                <li>
+                    <a href="fitness.html">Fitness</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a href="sass.html">Sass</a>
+        </li>
+        <li>
+            <a href="badges.html">Components</a>
+        </li>
+        <li>
+            <a href="collapsible.html">Javascript</a>
+        </li>
+        <li>
+            <a href="mobile.html">Mobile</a>
+        </li>
+    </ul>
+
+    <div class="carousel">
+        <a class="carousel-item" href="#one!">
+            <img src="../static/images/1.jpg">
+        </a>
+        <a class="carousel-item" href="#two!">
+            <img src="../static/images/2.jpg">
+        </a>
+        <a class="carousel-item" href="#three!">
+            <img src="../static/images/3.jpg">
+        </a>
+        <a class="carousel-item" href="#four!">
+            <img src="../static/images/4.jpg">
+        </a>
+        <a class="carousel-item" href="#five!">
+            <img src="../static/images/5.png">
+        </a>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <i class="fa fa-copyright" aria-hidden="true"></i>
+            Copyright 2018
+        </div>
+        <div class="made_by">
+            Developed By: FreeFlow.ai
+        </div>
+        <div class="footer_social">
+            <a href="#" class="btn-floating btn-sm btn-fb mx-1">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <!-- <a href="#" class="btn-floating btn-sm btn-gplus mx-1">
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a> -->
+            <!-- <a href="#" class="btn-floating btn-sm btn-li mx-1">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a> -->
+            <a href="#" class="btn-floating btn-sm btn-in mx-1">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="btn-floating btn-sm btn-tw mx-1">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="../static/materialize/js/materialize.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+</body>
+
+</html>
