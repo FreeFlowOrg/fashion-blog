@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Material Components for the web</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../static/materialize/css/materialize.css">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Kalam|Dancing+Script|Great+Vibes|Kaushan+Script|Pacifico|Sacramento" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="../static/materialize/js/materialize.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo right">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="left hide-on-med-and-down">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="/fashion/">Fashion</a>
+                </li>
+                <li>
+                    <a href="beauty.html">Beauty</a>
+                </li>
+                <li>
+                    <a href="lifestyle.html">Lifestyle</a>
+                </li>
+                <li>
+                    <a href="travel.html">Travel</a>
+                </li>
+                <li>
+                    <a href="fitness.html">Fitness</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a href="sass.html">Sass</a>
+        </li>
+        <li>
+            <a href="badges.html">Components</a>
+        </li>
+        <li>
+            <a href="collapsible.html">Javascript</a>
+        </li>
+        <li>
+            <a href="mobile.html">Mobile</a>
+        </li>
+    </ul>
+
+    {% block content %} {% endblock %}
+
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+        $(document).ready(function () {
+            $('.slider').slider();
+        });
+    </script>
+</body>
+
+</html>

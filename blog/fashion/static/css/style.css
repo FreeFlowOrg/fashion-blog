@@ -4,8 +4,9 @@ nav {
 
 nav ul li a, .sidenav li a {
     color: #646464;
-    font-family: sans-serif;
-    font-size: 13px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 nav ul li a:hover, .sidenav li a:hover {
@@ -17,13 +18,12 @@ nav ul li a.active {
     color: rgb(238, 110, 115);
 }
 
-.carousel .carousel-item {
-    visibility: hidden;
-    width: 350px;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    left: 0;
+.slider .indicators .indicator-item.active {
+    background-color: rgb(238, 110, 115) !important;
+}
+
+.slider {
+    font-family: 'Cookie', cursive;
 }
 
 .footer{
@@ -31,21 +31,28 @@ nav ul li a.active {
 	color: white;
     text-align: center;
     height: 165px;
+    font-family: 'Cookie', cursive;
 }
 .footer_social{
 	margin-top: 25px;
 }
 .copyright{
-	margin-top: 50px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+.made_by{
+    font-size: 20px;
 }
 
 .btn-fb{
 	background-color: #3b5998; 
-	font-size: 20px;
+    font-size: 20px;
+    margin-right: 20px;
 }
 .btn-in{
 	background-color: #fb3958; 
-	font-size: 20px; 
+    font-size: 20px; 
+    margin-right: 20px;
 }
 .btn-tw{
 	background-color:#0084b4; 
@@ -58,4 +65,107 @@ nav ul li a.active {
 .btn-gplus{
     background-color: #db4a39; 
     font-size: 20px; 
+}
+
+.browsing-category {
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    font-size: 30px;
+}
+
+.browsing-category>span{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+.card-image {
+    position: relative;
+    z-index: 0;
+}
+
+.card-content {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -100px;
+    z-index: 10;
+    background-color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.category {
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    font-size: 30px;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+.timestamp {
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 15px;
+    color: #646464;
+}
+
+.fa.fa-heart-o{
+    font-size: 30px;
+    color: rgb(238, 110, 115);
+}
+
+/* Animated Button */
+.spot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    /*make sure to use same height/width as in the html*/
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #fb3958;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+}
+
+#text {
+    margin-top: -35px;
+    text-align: center;
+}
+  
+#text a {
+    font-family: 'Kalam', sans-serif;
+    color: #646464;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+}
+
+.svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #fb3958;
 }

@@ -1,79 +1,44 @@
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <title>Material Components for the web</title>
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="../static/materialize/css/materialize.css">
-    <link href="../static/css/style.css" rel="stylesheet">
-    <link href="../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-</head>
 
-<body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo right">Logo</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="left hide-on-med-and-down">
-                <li>
-                    <a href="index.html" class="active">Home</a>
-                </li>
-                <li>
-                    <a href="fashion.html">Fashion</a>
-                </li>
-                <li>
-                    <a href="beauty.html">Beauty</a>
-                </li>
-                <li>
-                    <a href="lifestyle.html">Lifestyle</a>
-                </li>
-                <li>
-                    <a href="travel.html">Travel</a>
-                </li>
-                <li>
-                    <a href="fitness.html">Fitness</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
-        <li>
-            <a href="sass.html">Sass</a>
-        </li>
-        <li>
-            <a href="badges.html">Components</a>
-        </li>
-        <li>
-            <a href="collapsible.html">Javascript</a>
-        </li>
-        <li>
-            <a href="mobile.html">Mobile</a>
-        </li>
-    </ul>
-
-    <div class="carousel">
-        <a class="carousel-item" href="#one!">
-            <img src="../static/images/1.jpg">
-        </a>
-        <a class="carousel-item" href="#two!">
-            <img src="../static/images/2.jpg">
-        </a>
-        <a class="carousel-item" href="#three!">
-            <img src="../static/images/3.jpg">
-        </a>
-        <a class="carousel-item" href="#four!">
-            <img src="../static/images/4.jpg">
-        </a>
-        <a class="carousel-item" href="#five!">
-            <img src="../static/images/5.png">
-        </a>
+{% block content %}
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="../static/images/1.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="../static/images/2.jpg">
+                <!-- random image -->
+                <div class="caption left-align">
+                    <h3>Left Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="../static/images/3.jpg">
+                <!-- random image -->
+                <div class="caption right-align">
+                    <h3>Right Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="../static/images/4.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+        </ul>
     </div>
+
     <div class="footer">
         <div class="copyright">
             <i class="fa fa-copyright" aria-hidden="true"></i>
@@ -101,17 +66,4 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="../static/materialize/js/materialize.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-        });
-        $(document).ready(function () {
-            $('.carousel').carousel();
-        });
-    </script>
-</body>
-
-</html>
+{% endblock %}
