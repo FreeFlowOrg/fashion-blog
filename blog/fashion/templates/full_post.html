@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% load markdown_deux_tags %} {% block content %}
+<center>
+    <p class="category">~ {{post.category|title}} ~</p>
+    <p class="title">{{post.title}}</p>
+    {{post.post|markdown}} 
+
+    {% for comment in comments %}
+        <div class="row">
+            <div class="name">
+                {{comment.name}}
+            </div>
+            <div class="timestamp">
+                {{comment.timestamp}}
+            </div>
+            <div class="comment">
+                {{comment.comment}}
+            </div>
+        </div>
+    {% endfor %}
+</center>
+
+<div class="row">
+    <form class="col s12" method="post" action="/comment/{{post.id}}/">
+        {% csrf_token %}
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="comment" class="materialize-textarea" name="comment"></textarea>
+                <label for="comment">Comment*</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <input id="name" type="text" class="validate" name="name">
+                <label for="name">Name*</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="email" type="email" class="validate" name="email">
+                <label for="email">Email*</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="website" type="text" class="validate" name="website">
+                <label for="website">Website</label>
+            </div>
+        </div>
+        <center>
+            <input type="submit" class="btn" value="Comment">
+        </center>
+    </form>
+</div>
+
+<script>
+    $(".active").removeClass('active');
+    $("a[href='/{{post.category}}/']").addClass('active');
+</script> {% endblock %}

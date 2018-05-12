@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fashion',
     'mathfilters',
+    'markdown_deux',
+    'fashion',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,14 @@ DATABASES = {
     }
 }
 
+MARKDOWN_DEUX_STYLES = {
+    "default": {
+        "extras": {
+            "code-friendly": None,
+        },
+        "safe_mode": False,
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

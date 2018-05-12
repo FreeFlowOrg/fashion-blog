@@ -20,14 +20,14 @@
                 <p class="category">~ {{category}} ~</p>
                 <p class="title">{{post.title}}</p>
                 <p class="timestamp">{{post.created_on}}</p>
-                <p>{{post.post}}</p>
+                <p> {{post.description}} </p>
             </div>
             <center>
                 <div class="svg-wrapper">
                     <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
                         <rect id="shape" height="40" width="150" />
                         <div id="text">
-                            <a href="">
+                            <a href="/post/{{post.pk}}">
                                 <span class="spot"></span>VIEW POST</a>
                         </div>
                     </svg>
@@ -52,14 +52,14 @@
                 <p class="category">~ {{category}} ~</p>
                 <p class="title">{{post.title}}</p>
                 <p class="timestamp">{{post.created_on}}</p>
-                <p>{{post.post}}</p>
+                <p>{{post.description}}</p>
             </div>
             <center>
                 <div class="svg-wrapper">
                     <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
                         <rect id="shape" height="40" width="150" />
                         <div id="text">
-                            <a href="">
+                            <a href="/post/{{post.pk}}">
                                 <span class="spot"></span>VIEW POST</a>
                         </div>
                     </svg>
@@ -80,4 +80,5 @@
 <script>
     $(".active").removeClass('active');
     $("a[href='/{{href}}/']").addClass('active');
-</script> {% endblock %}
+</script> 
+{% endblock %}
