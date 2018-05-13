@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cookie|Kalam|Dancing+Script|Great+Vibes|Kaushan+Script|Pacifico|Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Kalam|Dancing+Script|Great+Vibes|Kaushan+Script|Pacifico|Sacramento"
+        rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="{% static 'materialize/js/materialize.js' %}"></script>
@@ -71,21 +72,40 @@
         $(document).ready(function () {
             $('.slider').slider();
         });
-        $(document).ready(function(){
-            $('.content-markdown').each(function(){
+        $(document).ready(function () {
+            $('.content-markdown').each(function () {
                 var content = $(this).text();
                 var markedContent = marked(content);
                 $(this).html(markedContent);
             })
-            $('.content-markdown img').each(function(){
-		var link = $(this).text();
-		console.log(link);
-		link += "?raw=true";
-		$(this).text(link);
+            $('.content-markdown img').each(function () {
+                var link = $(this).text();
+                console.log(link);
+                link += "?raw=true";
+                $(this).text(link);
                 $(this).addClass('img-responsive');
             })
         })
 
+        $(document).on('click', ".fa.fa-heart", function () {
+            var $this = $(this);
+            var pk = $(this).attr('id');
+            console.log(pk);
+            $.ajax({
+                type: "GET",
+                url: "/like/",
+                data: { 'pk': pk },
+                success: function (response) {
+                    if ($('.fa.fa-heart[data-id=' + pk + ']').css('color') == 'rgb(238, 110, 115)') {
+                        $this.css({ 'color': '#646464' });
+                    }
+                    else {
+                        $this.css({ 'color': 'rgb(238, 110, 115)' });
+                    }
+                    $('.likeCounter[data-id=' + pk + ']').text(response['likes']);
+                }
+            });
+        });    
     </script>
 </body>
 

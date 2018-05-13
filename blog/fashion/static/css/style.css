@@ -115,11 +115,6 @@ nav ul li a.active {
     color: #646464;
 }
 
-.fa.fa-heart-o{
-    font-size: 30px;
-    color: rgb(238, 110, 115);
-}
-
 /* Animated Button */
 .spot {
     position: absolute;

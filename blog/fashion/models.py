@@ -25,6 +25,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     image = models.FileField(blank=True, null=True)
+    likes = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title
@@ -39,3 +40,11 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.name
+
+class Like(models.Model):
+    ip = models.CharField(max_length=25)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.ip
